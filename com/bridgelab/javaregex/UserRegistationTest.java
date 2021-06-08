@@ -7,10 +7,8 @@ import java.util.Scanner;
 import org.junit.jupiter.api.Test;
 
 public class UserRegistationTest {
-
 	UserRegistation user = new UserRegistation();
 	Scanner sc = new Scanner(System.in);
-
 	// Valiadate First Name
 	@Test
 	public void validateFirstNameTest() {
@@ -20,7 +18,6 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
-
 	// Validate Last Name
 	@Test
 	public void validateLasttNameTest() {
@@ -30,7 +27,6 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
-
 	// Validate Email
 	@Test
 	public void validaeEmailTest() {
@@ -40,13 +36,21 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
-
 	// Validate Phone Number Giving Space
 	@Test
 	public void phoneNumberTest() {
 		System.out.println("Enter Phone Number With Country Code::");
 		String str = sc.nextLine();
 		boolean result = user.phoneNumber(str);
+		System.out.println("Output::" + result);
+		boolean excepted = true;
+		assertEquals(excepted, result);
+	}
+	@Test
+	public void passwordTest() {
+		System.out.println("Enter minimum 8 character for password::");
+		String str = sc.nextLine();
+		boolean result = user.passwordValidation(str);
 		System.out.println("Output::" + result);
 		boolean excepted = true;
 		assertEquals(excepted, result);

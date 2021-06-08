@@ -49,8 +49,18 @@ public class UserRegistation {
 //Validate Phone Number Giving Space
 	public boolean phoneNumber(String str) {
 		String phoneNumber = str;
-		System.out.println("After Call::" + phoneNumber);
 		String regex = "(91)[: :][9][0-9]{9}";
+		Pattern p = Pattern.compile(regex);
+		if (phoneNumber == null) {
+			return false;
+		}
+		Matcher m = p.matcher(phoneNumber);
+		return m.matches();
+	}
+//Passwword Validation
+	public boolean passwordValidation(String str) {
+		String phoneNumber = str;
+		String regex = "^[a-zA-Z]{8,15}$";
 		Pattern p = Pattern.compile(regex);
 		if (phoneNumber == null) {
 			return false;
