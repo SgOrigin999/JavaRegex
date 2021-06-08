@@ -29,4 +29,13 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
+	//Validate Email   
+	@Test
+	public void validaeEmailTest() {
+		System.out.println("Enter Email ID::");
+		String str = sc.next();
+		boolean result = user.validateEmail(str);
+		boolean excepted = true;
+		assertEquals(excepted, result);
+	}
 }
