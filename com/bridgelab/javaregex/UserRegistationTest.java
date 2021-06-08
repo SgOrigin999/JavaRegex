@@ -20,7 +20,8 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
-	//Validate Last Name
+
+	// Validate Last Name
 	@Test
 	public void validateLasttNameTest() {
 		System.out.println("Enter Last Name::");
@@ -29,12 +30,24 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
-	//Validate Email   
+
+	// Validate Email
 	@Test
 	public void validaeEmailTest() {
 		System.out.println("Enter Email ID::");
 		String str = sc.next();
 		boolean result = user.validateEmail(str);
+		boolean excepted = true;
+		assertEquals(excepted, result);
+	}
+
+	// Validate Phone Number Giving Space
+	@Test
+	public void phoneNumberTest() {
+		System.out.println("Enter Phone Number With Country Code::");
+		String str = sc.nextLine();
+		boolean result = user.phoneNumber(str);
+		System.out.println("Output::" + result);
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}

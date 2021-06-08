@@ -1,8 +1,10 @@
 package com.bridgelab.javaregex;
 
+import java.util.regex.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SuppressWarnings("unused")
 public class UserRegistation {
 
 	// Valiadate First Name
@@ -23,17 +25,17 @@ public class UserRegistation {
 		String lastName = str;
 		String regex = "^[A-Z]{1}[a-z]{2,15}$";
 		Pattern p = Pattern.compile(regex);
-
 		if (lastName == null) {
 			return false;
 		}
 		Matcher m = p.matcher(lastName);
 		return m.matches();
 	}
+
 //Validate Email Address
 	public boolean validateEmail(String str) {
 		String emailAdd = str;
-		//String regex = "^[A-Za-z0-9+.]+@[a-zA-Z0-9.]+[a-zA-Z]{2,6}$";
+		// String regex = "^[A-Za-z0-9+.]+@[a-zA-Z0-9.]+[a-zA-Z]{2,6}$";
 		String regex = "^[A-Za-z+.]+@[a-zA-Z.]+[a-zA-Z]{2,6}$";
 		Pattern p = Pattern.compile(regex);
 
@@ -41,6 +43,19 @@ public class UserRegistation {
 			return false;
 		}
 		Matcher m = p.matcher(emailAdd);
+		return m.matches();
+	}
+
+//Validate Phone Number Giving Space
+	public boolean phoneNumber(String str) {
+		String phoneNumber = str;
+		System.out.println("After Call::" + phoneNumber);
+		String regex = "(91)[: :][9][0-9]{9}";
+		Pattern p = Pattern.compile(regex);
+		if (phoneNumber == null) {
+			return false;
+		}
+		Matcher m = p.matcher(phoneNumber);
 		return m.matches();
 	}
 }
