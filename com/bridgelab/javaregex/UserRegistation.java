@@ -17,4 +17,17 @@ public class UserRegistation {
 		Matcher m = p.matcher(firstName);
 		return m.matches();
 	}
+
+//Validate Last Name
+	public boolean validateLasttName(String str) {
+		String lastName = str;
+		String regex = "^[A-Z]{1}[a-z]{2,15}$";
+		Pattern p = Pattern.compile(regex);
+
+		if (lastName == null) {
+			return false;
+		}
+		Matcher m = p.matcher(lastName);
+		return m.matches();
+	}
 }

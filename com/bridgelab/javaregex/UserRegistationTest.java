@@ -20,4 +20,13 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
+	//Validate Last Name
+	@Test
+	public void validateLasttNameTest() {
+		System.out.println("Enter Last Name::");
+		String str = sc.next();
+		boolean result = user.validateLasttName(str);
+		boolean excepted = true;
+		assertEquals(excepted, result);
+	}
 }
