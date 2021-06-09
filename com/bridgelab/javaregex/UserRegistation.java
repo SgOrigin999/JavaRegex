@@ -60,7 +60,7 @@ public class UserRegistation {
 //Passwword Validation
 	public boolean passwordValidation(String str) {
 		String phoneNumber = str;
-		String regex = "^[a-zA-Z]{8,15}$";
+		String regex = "^(?=.*[A-Z])[a-zA-Z]{8,15}$";
 		Pattern p = Pattern.compile(regex);
 		if (phoneNumber == null) {
 			return false;

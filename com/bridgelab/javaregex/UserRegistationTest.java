@@ -46,6 +46,7 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
+	//Validate Password
 	@Test
 	public void passwordTest() {
 		System.out.println("Enter minimum 8 character for password::");
