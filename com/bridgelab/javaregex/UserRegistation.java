@@ -61,7 +61,7 @@ public class UserRegistation {
    //Passwword Validation
 	public boolean passwordValidation(String str) {
 		String password = str;
-		String regex = "^(?=.*[0-9])(?=.*[A-Z]).{8,}$";
+		String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$";
 		Pattern p = Pattern.compile(regex);
 		if (password == null) {
 			return false;
