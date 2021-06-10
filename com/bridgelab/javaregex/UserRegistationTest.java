@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 public class UserRegistationTest {
 	UserRegistation user = new UserRegistation();
 	Scanner sc = new Scanner(System.in);
+
 	// Valiadate First Name
 	@Test
 	public void validateFirstNameTest() {
@@ -18,6 +19,7 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
+
 	// Validate Last Name
 	@Test
 	public void validateLasttNameTest() {
@@ -27,6 +29,7 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
+
 	// Validate Email
 	@Test
 	public void validaeEmailTest() {
@@ -36,6 +39,7 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
+
 	// Validate Phone Number Giving Space
 	@Test
 	public void phoneNumberTest() {
@@ -46,12 +50,22 @@ public class UserRegistationTest {
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
-	//Validate Password
+
+	// Validate Password
 	@Test
 	public void passwordTest() {
 		System.out.println("Enter password minimum 8 Digit::");
 		String str = sc.nextLine();
 		boolean result = user.passwordValidation(str);
+		boolean excepted = true;
+		assertEquals(excepted, result);
+	}
+
+	@Test
+	public void emailValidatorTest() {
+		System.out.println("Enter Email To Validate::");
+		String str = sc.nextLine();
+		boolean result = user.emailValidation(str);
 		boolean excepted = true;
 		assertEquals(excepted, result);
 	}
