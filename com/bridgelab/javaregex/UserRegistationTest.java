@@ -51,6 +51,7 @@ public class UserRegistationTest {
 	public void passwordTest() {
 		System.out.println("Enter minimum 8 character for password::");
 		String str = sc.nextLine();
+		System.out.println("Output::"+str);
 		boolean result = user.passwordValidation(str);
 		System.out.println("Output::" + result);
 		boolean excepted = true;

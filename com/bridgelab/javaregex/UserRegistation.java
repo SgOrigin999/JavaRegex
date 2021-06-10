@@ -57,15 +57,16 @@ public class UserRegistation {
 		Matcher m = p.matcher(phoneNumber);
 		return m.matches();
 	}
-//Passwword Validation
+
+   //Passwword Validation
 	public boolean passwordValidation(String str) {
-		String phoneNumber = str;
-		String regex = "^(?=.*[A-Z])[a-zA-Z]{8,15}$";
+		String password = str;
+		String regex = "^(?=.*[0-9])(?=.*[A-Z]).{8,}$";
 		Pattern p = Pattern.compile(regex);
-		if (phoneNumber == null) {
+		if (password == null) {
 			return false;
 		}
-		Matcher m = p.matcher(phoneNumber);
+		Matcher m = p.matcher(password);
 		return m.matches();
 	}
 }
